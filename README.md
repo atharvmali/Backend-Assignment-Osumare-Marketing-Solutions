@@ -9,6 +9,11 @@ This repository contains the completed backend assignment along with a frontend 
 - **Backend**: RESTful API with authentication, pagination, filtering, and sorting
 - **Frontend**: Server-side rendered interface using EJS templates (located in the `views` directory)
 
+## Live Demo
+
+The application is deployed and available at:
+[https://backend-assignment-osumare-marketing.onrender.com/](https://backend-assignment-osumare-marketing.onrender.com/)
+
 ## Features
 
 - **User Authentication**
@@ -75,8 +80,9 @@ This repository contains the completed backend assignment along with a frontend 
    ```
 
 5. Access the application:
-   - Frontend: Open `http://localhost:3000` in your web browser
-   - API: Available at `http://localhost:3000/tasks` (requires authentication)
+   - Live demo: [https://backend-assignment-osumare-marketing.onrender.com/](https://backend-assignment-osumare-marketing.onrender.com/)
+   - Local frontend: Open `http://localhost:3000` in your web browser
+   - Local API: Available at `http://localhost:3000/tasks` (requires authentication)
 
 ### API Documentation
 

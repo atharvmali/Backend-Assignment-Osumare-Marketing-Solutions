@@ -6,6 +6,12 @@ This REST API provides endpoints for managing tasks with user authentication, pa
 
 ## Base URL
 
+Production:
+```
+https://backend-assignment-osumare-marketing.onrender.com
+```
+
+Local Development:
 ```
 http://localhost:3000
 ```
@@ -310,10 +316,12 @@ The API returns appropriate HTTP status codes and error messages for different s
 
 ### Using curl
 
+For local testing, use `http://localhost:3000`. For production, use `https://backend-assignment-osumare-marketing.onrender.com`.
+
 1. Register a new user:
 
 ```bash
-curl -X POST http://localhost:3000/auth/register \
+curl -X POST https://backend-assignment-osumare-marketing.onrender.com/auth/register \
   -H "Content-Type: application/json" \
   -d '{"username":"user123","password":"password123"}'
 ```
@@ -321,7 +329,7 @@ curl -X POST http://localhost:3000/auth/register \
 2. Login:
 
 ```bash
-curl -X POST http://localhost:3000/auth/login \
+curl -X POST https://backend-assignment-osumare-marketing.onrender.com/auth/login \
   -H "Content-Type: application/json" \
   -d '{"username":"user123","password":"password123"}'
 ```
@@ -329,14 +337,14 @@ curl -X POST http://localhost:3000/auth/login \
 3. Get all tasks with filtering and pagination:
 
 ```bash
-curl -X GET 'http://localhost:3000/tasks?page=1&limit=5&completed=false&sortBy=createdAt&sortOrder=desc' \
+curl -X GET 'https://backend-assignment-osumare-marketing.onrender.com/tasks?page=1&limit=5&completed=false&sortBy=createdAt&sortOrder=desc' \
   -H "Authorization: Bearer YOUR_TOKEN_HERE"
 ```
 
 4. Create a new task:
 
 ```bash
-curl -X POST http://localhost:3000/tasks \
+curl -X POST https://backend-assignment-osumare-marketing.onrender.com/tasks \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer YOUR_TOKEN_HERE" \
   -d '{"title":"New Task","description":"This is a new task"}'
@@ -345,7 +353,7 @@ curl -X POST http://localhost:3000/tasks \
 5. Update a task:
 
 ```bash
-curl -X PUT http://localhost:3000/tasks/1 \
+curl -X PUT https://backend-assignment-osumare-marketing.onrender.com/tasks/1 \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer YOUR_TOKEN_HERE" \
   -d '{"title":"Updated Task","description":"This is an updated task","completed":true}'
@@ -354,6 +362,6 @@ curl -X PUT http://localhost:3000/tasks/1 \
 6. Delete a task:
 
 ```bash
-curl -X DELETE http://localhost:3000/tasks/1 \
+curl -X DELETE https://backend-assignment-osumare-marketing.onrender.com/tasks/1 \
   -H "Authorization: Bearer YOUR_TOKEN_HERE"
 ``` 

@@ -169,3 +169,18 @@ The current implementation has several scalability limitations:
 2. **Single Server Architecture**: No distribution or load balancing
 3. **Synchronous Operations**: Some operations could block the event loop
 4. **Template Rendering**: Server-side rendering increases server CPU usage compared to pure API responses
+
+## Deployment
+
+The application is deployed on Render, a cloud service provider that offers free hosting for small applications. The deployment includes:
+
+1. **Node.js Environment**: Hosted on Render's Node.js environment
+2. **Continuous Deployment**: Auto-deployment from the GitHub repository
+3. **Public Access**: Available at https://backend-assignment-osumare-marketing.onrender.com/
+4. **Environment Variables**: JWT secret and other configuration managed through Render's environment variables
+
+### Deployment Considerations
+
+1. **In-Memory Storage**: The current implementation uses in-memory storage, which means data will be reset when the service restarts or when the application is redeployed
+2. **Free Tier Limitations**: On Render's free tier, the service may spin down after periods of inactivity, causing a brief delay on first access
+3. **Future Improvements**: For a production application, a persistent database (MongoDB, PostgreSQL, etc.) would be implemented to maintain data between deployments
